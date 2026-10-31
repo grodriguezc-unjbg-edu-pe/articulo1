@@ -30,15 +30,13 @@ void shellSort(vector<int>& datos) {
 
 // Mostrar los primeros elementos del vector
 void mostrarDatos(const vector<int>& datos) {
-    int limite = min(20, (int)datos.size());
+    int limite = min(1000, (int)datos.size());
 
     for (int i = 0; i < limite; i++) {
         cout << datos[i] << " ";
     }
 
-    if (datos.size() > 20)
-        cout << "...";
-
+   
     cout << endl;
 }
 
@@ -46,7 +44,7 @@ void mostrarDatos(const vector<int>& datos) {
 vector<int> generarAleatorios(int n) {
     vector<int> datos(n);
 
-    mt19937 generador(1234);
+    mt19937 generador(12);
     uniform_int_distribution<int> distribucion(1, 1000);
 
     for (int i = 0; i < n; i++) {

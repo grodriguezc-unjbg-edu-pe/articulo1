@@ -33,7 +33,7 @@ void quickSort(vector<int>& A, int inicio, int fin) {
 
 // Generar datos aleatorios uniformes
 void generarAleatorios(vector<int>& A) {
-    mt19937 generador(4321); // Semilla fija
+    mt19937 generador(11); // Semilla fija
     uniform_int_distribution<int> distribucion(1, 1000);
 
     for (int& x : A) {
@@ -43,15 +43,13 @@ void generarAleatorios(vector<int>& A) {
 
 // Mostrar los primeros elementos
 void mostrarDatos(const vector<int>& A) {
-    int limite = min(20, (int)A.size());
+    int limite = min(1000, (int)A.size());
 
     for (int i = 0; i < limite; i++) {
         cout << A[i] << " ";
     }
 
-    if (A.size() > 20) {
-        cout << "...";
-    }
+   
 
     cout << endl;
 }
